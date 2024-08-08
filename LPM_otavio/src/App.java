@@ -14,6 +14,9 @@ public class App {
         dezena = numero / 10;
         meio = unidade + dezena;
 
+
+        System.out.printf("%d%d%d", dezena, meio, unidade);
+
         teclado.close();
 
     }
