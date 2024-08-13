@@ -8,7 +8,8 @@ public class Eleicao {
         // imprimeResultado(vencedor, votosRegistrados[0], votosRegistrados[1],
         // votosRegistrados[2], votosRegistrados[3], votosRegistrados[4],
         // votosRegistrados[5]);
-        imprimeResultado(vencedor, votosRegistrados[3], votosRegistrados[4], votosRegistrados[5]);
+        // imprimeResultado(vencedor, votosRegistrados[3], votosRegistrados[4], votosRegistrados[5]);
+        System.out.printf("Vencedor: %d \nVotos nulos: %d \nVotos brancos: %d \nTotal de eleitores: %d", vencedor, votosRegistrados[4], votosRegistrados[3], votosRegistrados[5]);
         scanner.close();
     }
 
@@ -47,31 +48,31 @@ public class Eleicao {
     }
 
     public static int calculaVencedor(int c1, int c2, int c3) {
-        int vencedor = 0;
+        int resultado = 0;
         if (c1 == c2 || c1 == c3 || c2 == c3) {
-            return vencedor;
+            return resultado;
         } else if (c1 > c2 && c1 > c3) {
-            vencedor = 1;
+            resultado = 1;
         } else if (c2 > c1 && c2 > c3) {
-            vencedor = 2;
+            resultado = 2;
         } else if (c3 > c1 && c3 > c2) {
-            vencedor = 3;
+            resultado = 3;
         }
-        return vencedor;
+        return resultado;
     }
 
-    public static void imprimeResultado(int vencedor, int branco, int nulo, int total) {
+    // public static void imprimeResultado(int vencedor, int branco, int nulo, int total) {
 
-        int[] resultados = { vencedor, branco, nulo, total };
-        for (int i = 0; i < resultados.length; i++) {
-            System.out.println(resultados[i]);
-        }
+    //     int[] resultados = { vencedor, branco, nulo, total };
+    //     for (int i = 0; i < resultados.length; i++) {
+    //         System.out.println(resultados[i]);
+    //     }
 
-        // o programa, que deve fornecer o número do vencedor da eleição (suponha que não
-        // pode haver empates), as quantidades de votos brancos e nulos e o número de
-        // eleitores que
-        // compareceram às urnas.
+    //     // o programa, que deve fornecer o número do vencedor da eleição (suponha que não
+    //     // pode haver empates), as quantidades de votos brancos e nulos e o número de
+    //     // eleitores que
+    //     // compareceram às urnas.
 
-    }
+    // }
 
 }
