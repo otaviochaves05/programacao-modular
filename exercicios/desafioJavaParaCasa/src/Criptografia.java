@@ -26,7 +26,6 @@ public class Criptografia {
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
-
     }  
 
     public static char[] lerArquivo(String NOME_ARQUIVO) throws FileNotFoundException { 
