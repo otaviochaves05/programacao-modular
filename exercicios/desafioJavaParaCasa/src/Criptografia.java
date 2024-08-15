@@ -1,6 +1,5 @@
 import java.util.Scanner;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileWriter;
 
 public class Criptografia {
@@ -26,7 +25,7 @@ public class Criptografia {
     }  
 
 
-    public static char[] lerArquivo(String NOME_ARQUIVO) throws FileNotFoundException { 
+    public static char[] lerArquivo(String NOME_ARQUIVO) throws Exception { 
         Scanner arquivo = new Scanner(new File(NOME_ARQUIVO));
         String linha = arquivo.nextLine();
         char[] caracteres = linha.toCharArray();
