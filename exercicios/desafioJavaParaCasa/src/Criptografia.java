@@ -4,6 +4,7 @@ import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 
+
 public class Criptografia {
     public static void main(String[] args) {
         final String NOME_ARQUIVO = "mensagem.txt";
