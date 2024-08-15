@@ -2,31 +2,29 @@ import java.util.Scanner;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
-import java.io.IOException;
 
 public class Criptografia {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception{
         final String NOME_ARQUIVO = "mensagem.txt";
-        char[] respostaArquivo = null;
-        try {
+        char[] respostaArquivo;
+    
             respostaArquivo = lerArquivo(NOME_ARQUIVO);
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
+
         int[] respostaASCII = converteParaASCII(respostaArquivo);
         int[] ASCIIAdicionado = adicionaASCII(respostaASCII);
         char[] criptografiaFinal = converteParaChar(ASCIIAdicionado);
-        String mensagemFinal = new String(criptografiaFinal); 
+        
         final String ARQUIVO_CRIPTOGRAFADO = "criptografado.txt";
+
+        String mensagemFinal = new String(criptografiaFinal); 
         File novoArquivo = new File(ARQUIVO_CRIPTOGRAFADO);
-        try {
+        
             FileWriter writer = new FileWriter(novoArquivo);
             writer.write(mensagemFinal);
             writer.close();
-        } catch (IOException e) {
-            System.out.println(e.getMessage());
-        }
+        
     }  
+
 
     public static char[] lerArquivo(String NOME_ARQUIVO) throws FileNotFoundException { 
         Scanner arquivo = new Scanner(new File(NOME_ARQUIVO));
