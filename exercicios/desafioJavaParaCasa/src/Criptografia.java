@@ -6,17 +6,16 @@ import java.io.FileWriter;
 public class Criptografia {
     public static void main(String[] args) throws Exception{
         final String NOME_ARQUIVO = "mensagem.txt";
-        char[] respostaArquivo;
-    
-            respostaArquivo = lerArquivo(NOME_ARQUIVO);
-
+        final String ARQUIVO_CRIPTOGRAFADO = "criptografado.txt";
+        char[] respostaArquivo = lerArquivo(NOME_ARQUIVO);
         int[] respostaASCII = converteParaASCII(respostaArquivo);
         int[] ASCIIAdicionado = adicionaASCII(respostaASCII);
         char[] criptografiaFinal = converteParaChar(ASCIIAdicionado);
         
-        final String ARQUIVO_CRIPTOGRAFADO = "criptografado.txt";
+        
 
         String mensagemFinal = new String(criptografiaFinal); 
+
         File novoArquivo = new File(ARQUIVO_CRIPTOGRAFADO);
         
             FileWriter writer = new FileWriter(novoArquivo);
@@ -24,7 +23,6 @@ public class Criptografia {
             writer.close();
         
     }  
-
 
     public static char[] lerArquivo(String NOME_ARQUIVO) throws Exception { 
         Scanner arquivo = new Scanner(new File(NOME_ARQUIVO));
