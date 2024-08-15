@@ -6,15 +6,25 @@ public class Imposto {
         double valor, valorImposto;
         valor = lerNumero(scanner);
         valorImposto = calculaImposto(valor);
-        mostraImposto(valorImposto);
+        System.out.printf("O imposto a pagar é: R$ %.2f",valorImposto);
         scanner.close();
     }
 
+    /**
+     * Solicita ao usuário que insira um valor numérico e o retorna como um valor double.
+     * @param scanner O metodo recebe a variavel scanner para a entrada de dados.
+     * @return retorna a proxima linha lida com o valor fornecido pelo usuário no tipo double
+     */
     public static double lerNumero(Scanner scanner){
         System.out.print("Digite o valor: ");
-        return Float.valueOf(scanner.nextLine());
+        return Double.parseDouble(scanner.nextLine());
     }
 
+    /**
+     * Calcula o valor do imposto a ser pago com base em faixas de valores predefinidas.
+     * @param valor
+     * @return retorna o valor do imposto a ser pago calculado de acordo com as faixas numéricas predefinidas 
+     */
     public static double calculaImposto(double valor){
         final double valores[] = {1200.00 , 2500.00 , 5000.00};
         final double desconto[] = {0.1 , 0.15 , 0.2};
@@ -29,9 +39,4 @@ public class Imposto {
             return valor * desconto[2];
         }
     }
-
-    public static void mostraImposto(double valorImposto){
-        System.out.printf("O imposto a pagar é: R$ %.2f",valorImposto);
-    }
-
 }
