@@ -1,1 +1,1 @@
-alo tudo bem com voce
+Este é um arquivo criptografado em JAVA!!!
