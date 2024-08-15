@@ -12,8 +12,8 @@ public class Imposto {
 
     /**
      * Solicita ao usuário que insira um valor numérico e o retorna como um valor double.
-     * @param scanner O metodo recebe a variavel scanner para a entrada de dados.
-     * @return retorna a proxima linha lida com o valor fornecido pelo usuário no tipo double
+     * @param scanner objeto utilizado para ler a entrada de dados.
+     * @return retorna a proxima linha lida com o valor fornecido pelo usuário no tipo double.
      */
     public static double lerNumero(Scanner scanner){
         System.out.print("Digite o valor: ");
@@ -22,8 +22,8 @@ public class Imposto {
 
     /**
      * Calcula o valor do imposto a ser pago com base em faixas de valores predefinidas.
-     * @param valor
-     * @return retorna o valor do imposto a ser pago calculado de acordo com as faixas numéricas predefinidas 
+     * @param valor valor fornecido pelo usuário.
+     * @return retorna o valor do imposto a ser pago calculado de acordo com as faixas numéricas predefinidas.
      */
     public static double calculaImposto(double valor){
         final double valores[] = {1200.00 , 2500.00 , 5000.00};
