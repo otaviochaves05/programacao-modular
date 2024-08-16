@@ -2,7 +2,7 @@ import java.util.Scanner;
 import java.io.File;
 import java.io.FileWriter;
 
-
+/*Não consegui gerar o arquivo através do programa, mas se caso forem criados os arquivos manualmente na pasta raiz do projeto, o programa funcionará corretamente*/
 public class Criptografia {
     public static void main(String[] args) throws Exception{
         final String NOME_ARQUIVO = "mensagem.txt";
