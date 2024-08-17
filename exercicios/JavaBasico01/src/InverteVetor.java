@@ -2,14 +2,13 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class InverteVetor {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         int tamanhoVetor = 6;
         int[] vetorLido = lerVetor(tamanhoVetor);
         int[] vetorInvertido = inverteVetor(vetorLido);
         System.out.println(Arrays.toString(vetorInvertido));
     }
-
-    /**
+     /**
      * Lê um vetor de números inteiros a partir da entrada do usuário.
      * @param tamanhoVetor o tamanho do vetor a ser lido, ou seja, o número de inteiros que o usuário deve fornecer.
      * @return retorna um vetor de inteiros contendo os valores inseridos pelo usuário.
